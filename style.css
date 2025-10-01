@@ -10,15 +10,18 @@ body {
     background-color: #FFFFFF;
 
     & .main-container {
+        position: relative;
         max-width: 1500px;
         margin: auto;
     }
 }
 
 header {
-    max-width: 100%;
+    position: fixed;
+    background-color: #FFFFFF;
+    max-width: 1280px;
     display: flex;
-    justify-content: space-between;
+    gap: 200px;
     align-items: center;
 
     & .burger-menu {
@@ -83,7 +86,7 @@ header {
 }
 
 .preview {
-    margin-top: 88px;
+    padding-top: 100px;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -156,6 +159,7 @@ header {
 
 @media(max-width:753px) {
     header {
+        gap: 30px;
         & .header-menu nav {
             display: none;
         }
@@ -194,6 +198,7 @@ header {
 
 @media(max-width:400px) {
     header {
+        gap: 200px;
         & img {
             width: 140px;
         }

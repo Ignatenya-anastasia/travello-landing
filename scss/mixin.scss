@@ -1,0 +1,19 @@
+@mixin flex-box ($gap, $ai, $jc, $fd){
+    display: flex;
+    gap: $gap;
+    align-items: $ai;
+    justify-content: $jc;
+    flex-direction: $fd;
+}
+
+@mixin default-font ($fw, $fs, $ff, $ta){
+    font: $fw $fs $ff;
+    text-align: $ta;
+}
+
+@mixin default-button ($w, $h, $bc, $br){
+    width: $w;
+    height: $h;
+    background-color: $bc;
+    border-radius: $br;
+}

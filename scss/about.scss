@@ -1,0 +1,103 @@
+.testimonials {
+    padding-top: 280px;
+    @include flex-box(109px, center, space-between, row);
+
+    .left {
+        max-width: 40%;
+        @include flex-box(10px, start, start, column);
+
+        p {
+            @include default-font(600, 24px, Poppins, start);
+            color: #5E6282;
+        }
+
+        h3 {
+            @include default-font(700, 66px, Volkhov, start);
+            color: #14183E;
+        }
+    }
+
+    .right {
+        height: 325px;
+        @include flex-box(36px, center, start, row);
+
+        .vector{
+            @include flex-box (76px, center, start, column);
+        }
+        .info {
+            max-width: 670px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 37px 90px 45px 45px;
+            border-radius: 13px;
+            box-shadow: 0px 133.01px 106.41px 0px #00000025;
+
+            & p:first-child {
+                @include default-font(500, 21px, Poppins, start);
+                color: #5E6282;
+            }
+
+            .tittle {
+                padding-top: 45px;
+                @include default-font(600, 24px, Poppins, start);
+                color: #5E6282;
+            }
+
+            p {
+                padding-top: 7px;
+                @include default-font(500, 18px, Poppins, start);
+                color: #5E6282;
+            }
+        }
+    }
+}
+
+.logos{
+    padding-top: 230px;
+    @include flex-box(100px, center, space-between, row);
+
+    div{
+        width: 320px;
+        height: 114px;
+        display: flex;
+        align-items: center;
+    }
+
+    & div:hover{
+        box-shadow: 0px 133.01px 106.41px 0px #00000025;
+    }
+}
+
+.subscribe{
+    margin-top: 164px;
+    padding: 105px 207px;
+    border-radius: 171px 26px 26px 26px;
+    background-color: #c0bad5;
+    @include flex-box(98px, center, start, column);
+
+    h2{
+        @include default-font(600, 44px, Poppins, center);
+        color: #5E6282;
+    }
+
+    .form{
+        display: flex;
+        gap: 31px;
+
+        input{
+            width: 559px;
+            height: 90px;
+            background-color: #FFFFFF;
+    }
+
+    button{
+        width: 239px;
+        height: 90px;
+        border-radius: 13px;
+        background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+        @include default-font(600, 22px, Open Sans, center);
+        color: #FFFFFF;
+    }
+    }
+}

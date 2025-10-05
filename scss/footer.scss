@@ -1,0 +1,43 @@
+footer{
+    padding-top: 220px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+
+    .left{
+        @include flex-box(60px, start, start, column);
+
+        img{
+            width: 183px;
+            height: 53px;
+        }
+
+        p{
+            max-width: 60%;
+            @include default-font(500, 17px, Poppins, start);
+            color: #5E6282;
+        }
+    }
+
+    .right{
+        @include flex-box(100px, start, space-between, row);
+
+        div{
+            @include flex-box(45px, start, start, column);
+
+            h2{
+                @include default-font(700, 28px, Poppins, start);
+                color: #080809;
+            }
+
+            nav{
+                @include flex-box(17px, start, start, column);
+
+                p{
+                    @include default-font(500, 24px, Poppins, start);
+                    color: #5E6282;
+                }
+            }
+        }
+    }
+}

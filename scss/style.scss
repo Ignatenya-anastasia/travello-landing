@@ -1,0 +1,159 @@
+@import './mixin';
+@import './adaptive';
+@import './main';
+@import './info';
+@import './about';
+@import './footer';
+
+* {
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background-color: #FFFFFF;
+
+    .main-container {
+        position: relative;
+        max-width: 1564px;
+        margin: auto;
+    }
+}
+
+header {
+    position: fixed;
+    max-width: 100%;
+    background-color: #FFFFFF;
+
+
+    .container{
+    width: 1564px;
+    margin: auto;
+    @include flex-box (0, center, space-between, row);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    img {
+        width: 183px;
+        height: 53px;
+    }
+
+    .header-menu {
+        display: flex;
+        gap: 114px;
+
+        nav {
+            @include flex-box(83px, center, start, row);
+
+            p {
+                @include default-font(400, 23px, Google Sans, start);
+                color: #212832;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .buttons {
+            @include flex-box(50px, center, start, row);
+
+            .registr {
+                width: 135px;
+                height: 53px;
+                @include default-font(500, 23px, Google Sans, start);
+                color: #212832;
+
+                &:hover {
+                    border: 1.33px solid #212832;
+                    border-radius: 7px;
+                }
+            }
+
+            .btn-leng {
+                @include flex-box(9px, center, start, row);
+                @include default-font(500, 23px, Google Sans, start);
+                color: #212832;
+
+                img {
+                    width: 12px;
+                    height: 6px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.preview {
+    padding-top: 100px;
+    max-width: 100%;
+    @include flex-box(0, center, space-between, row);
+
+
+    .preview-info {
+        max-width: 50%;
+        @include flex-box(40px, start, start, column);
+
+
+        & p:first-child {
+            @include default-font(700, 27px, Poppins, start);
+            color: #DF6951
+        }
+
+        h1 {
+            @include default-font(700, 112px, Volkhov, start);
+            color: #181E4B;
+        }
+
+        p {
+            max-width: 70%;
+            @include default-font(500, 22px, Poppins, start);
+            color: #5E6282;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 58px;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+
+            button:first-child {
+                @include default-button (226px, 79px, #F1A501, 13px);
+                box-shadow: 0px 26.6px 46.55px 0px #F1A50126;
+                @include default-font(500, 24px, Google Sans, center);
+                color: #FFFFFF;
+            }
+
+            button:last-child {
+                width: 226px;
+                height: 79px;
+                display: flex;
+                gap: 15px;
+                @include default-font(500,  23px, Poppins, center);
+                color: #686D77;
+
+                &:hover {
+                    border-radius: 13px;
+                    box-shadow: 0px 19.95px 39.9px 0px #DF69514D;
+                    background: linear-gradient(180deg, #FF946D 0%, #FF7D68 100%);
+                }
+            }
+        }
+    }
+
+    img {
+        max-width: 50%;
+    }
+}
